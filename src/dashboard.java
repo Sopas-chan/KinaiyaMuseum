@@ -46,6 +46,12 @@ public class dashboard extends JFrame {
 		contentPane.add(panel);
 		panel.setLayout(null);
 		
+		JLabel logout = new JLabel("Logout");
+		logout.setFont(new Font("DK Lemon Yellow Sun", Font.PLAIN, 30));
+		logout.setForeground(Color.WHITE);
+		logout.setBounds(22, 11, 75, 32);
+		panel.add(logout);
+		
 		JLabel viewbtn = new JLabel("view");
 		viewbtn.setHorizontalAlignment(SwingConstants.CENTER);
 		viewbtn.setForeground(Color.WHITE);
