@@ -20,6 +20,14 @@ public class M_signup2 {
 		String cpass = Credentials.get(2);
 		return cpass;
 	}
+	public String getFName() {
+		String fname = Credentials.get(3);
+		return fname;
+	}
+	public String getLName () {
+		String lname = Credentials.get(4);
+		return lname;
+	}
 	public ArrayList<String> getData() {
 		return Credentials;
 	}

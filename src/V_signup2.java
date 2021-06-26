@@ -39,6 +39,8 @@ public class V_signup2 {
 		ReceivedData.add(un.getText());
 		ReceivedData.add(pass.getText());
 		ReceivedData.add(confirmpass.getText());
+		ReceivedData.add(fn.getText());
+		ReceivedData.add(ln.getText());
 		return ReceivedData;
 	}
 	public void signUpButton(MouseAdapter ma) {
@@ -214,12 +216,6 @@ public class V_signup2 {
 		bg.setIcon(new ImageIcon(img));
 		bg.setBounds(0, 0, 826, 464);
 		frame.getContentPane().add(bg);
-		
-		firstname = fn.getText();
-		lastname = ln.getText();
-		username = un.getText();
-		password = pass.getText();
-		cfpass = confirmpass.getText();
 		
 	}
 }

@@ -12,8 +12,9 @@ public class C_signup2 {
 			@Override
 			public void mouseClicked(MouseEvent e) {
 				ms2.setData(vs2.memberCreds());
-				if (vs2.firstname.trim().equals("") || vs2.firstname.trim().equals("First Name") || vs2.lastname.trim().equals("") 
-					|| vs2.lastname.trim().equals("Last Name") || vs2.username.trim().equals("") || vs2.username.trim().equals("Username")) {
+				if (ms2.getFName().equals("") || ms2.getFName().equals("First Name") || ms2.getLName().equals("") 
+					|| ms2.getLName().equals("Last Name") || ms2.getUser().equals("") || ms2.getUser().equals("Username") || ms2.getPass().equals("")
+					|| ms2.getPass().equals("Password") || ms2.getCPass().equals("") || ms2.getCPass().equals("Confirm Password")) {
 					vs2.blankFields();
 				}
 				else if (!ms2.getPass().equals(ms2.getCPass())) {
