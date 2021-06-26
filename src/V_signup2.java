@@ -141,7 +141,6 @@ public class V_signup2 {
 				
 					if(fn.getText().equals("")) {
 						fn.setText("FIRST NAME");
-					
 					}
 			}
 		});

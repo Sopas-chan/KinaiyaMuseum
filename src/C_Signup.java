@@ -13,7 +13,13 @@ public class C_Signup {
 			@Override
 			public void mouseClicked(MouseEvent e) {
 				ms.setData(vs.getcredentials());
-				if (!ms.getPassword().equals(ms.getConfirmPass())) {
+				if (ms.getFName().equals("") || ms.getFName().equals("First Name") || ms.getLName().equals("") 
+						|| ms.getLName().equals("Last Name") || ms.getPName().equals("") || ms.getPName().equals("Pen Name") 
+						|| ms.getUser().equals("") || ms.getUser().equals("Username") || ms.getPass().equals("") 
+						|| ms.getPass().equals("Password") || ms.getCPass().equals("") || ms.getCPass().equals("Confirm Password")) {
+						vs.blankFields();
+					}
+				else if (!ms.getPass().equals(ms.getCPass())) {
 					vs.notMatch();
 				}
 				else {

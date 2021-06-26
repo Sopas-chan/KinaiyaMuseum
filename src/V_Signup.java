@@ -35,6 +35,9 @@ public class V_Signup {
 		RecievedData.add(un.getText());
 		RecievedData.add(pass.getText());
 		RecievedData.add(confirmpass.getText());
+		RecievedData.add(pn.getText());
+		RecievedData.add(ln.getText());
+		RecievedData.add(pn.getText());
 		return RecievedData;
 	}
 	void signUpButton(MouseAdapter ma) {
@@ -48,6 +51,9 @@ public class V_Signup {
 	}
 	void backButton(MouseAdapter ma) {
 		back.addMouseListener(ma);
+	}
+	void blankFields() {
+		JOptionPane.showMessageDialog(null, "One or more fields cannot be empty!");
 	}
 	private void initialize() {
 		frame = new JFrame();
@@ -74,7 +80,7 @@ public class V_Signup {
 				}
 			}
 		});
-		un.setText("username");
+		un.setText("Username");
 		un.setForeground(Color.WHITE);
 		un.setFont(new Font("DK Lemon Yellow Sun", Font.PLAIN, 18));
 		un.setColumns(10);
@@ -108,7 +114,7 @@ public class V_Signup {
 				}
 				}
 		});
-		fn.setText("first name");
+		fn.setText("First Name");
 		fn.setFont(new Font("DK Lemon Yellow Sun", Font.PLAIN, 18));
 		fn.setForeground(Color.WHITE);
 		fn.setBackground(Color.BLACK);
@@ -165,7 +171,7 @@ public class V_Signup {
 				}
 			}
 		});
-		ln.setText("last name");
+		ln.setText("Last Name");
 		ln.setForeground(Color.WHITE);
 		ln.setFont(new Font("DK Lemon Yellow Sun", Font.PLAIN, 18));
 		ln.setColumns(10);
@@ -185,7 +191,7 @@ public class V_Signup {
 				}
 			}
 		});
-		pn.setText("pen name");
+		pn.setText("Pen Name");
 		pn.setForeground(Color.WHITE);
 		pn.setFont(new Font("DK Lemon Yellow Sun", Font.PLAIN, 18));
 		pn.setColumns(10);
