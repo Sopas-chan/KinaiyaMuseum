@@ -2,10 +2,13 @@ import java.awt.EventQueue;
 
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.ImageIcon;
 import javax.swing.JTextField;
 import java.awt.Color;
 import java.awt.Font;
+import java.awt.Image;
+
 import javax.swing.JButton;
 import javax.swing.SwingConstants;
 import javax.swing.JPanel;
@@ -14,39 +17,40 @@ import java.awt.event.FocusEvent;
 import javax.swing.JPasswordField;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+import java.awt.Cursor;
 
-public class Loginpage {
+public class V_Loginpage {
 
-	private JFrame frame;
+	public JFrame frame;
 	private JTextField username;
 	private JPasswordField password;
+	private JLabel signupButton, loginButton;
 
-	/**
-	 * Launch the application.
-	 */
-	public static void main(String[] args) {
-		EventQueue.invokeLater(new Runnable() {
-			public void run() {
-				try {
-					Loginpage window = new Loginpage();
-					window.frame.setVisible(true);
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-			}
-		});
-	}
 
-	/**
-	 * Create the application.
-	 */
-	public Loginpage() {
+	public V_Loginpage() {
 		initialize();
 	}
 
-	/**
-	 * Initialize the contents of the frame.
-	 */
+
+	public String getuser() {
+		String name = username.getText();
+		return name;
+	}
+	public String getpass() {
+		String pass = password.getText();
+		return pass;
+	}
+	void signupButton(MouseAdapter ma) {
+		signupButton.addMouseListener(ma);
+	}
+	void loginButton(MouseAdapter ma) {
+		loginButton.addMouseListener(ma);
+	}
+	
+	public void wrongCreds() {
+		JOptionPane.showMessageDialog(null, "Username/Pass is incorrect or not found");
+	}
+	
 	private void initialize() {
 		frame = new JFrame();
 		frame.setBounds(100, 100, 840, 488);
@@ -58,7 +62,7 @@ public class Loginpage {
 		frame.getContentPane().add(panel);
 		panel.setLayout(null);
 		
-		username = new JTextField();
+		username =  new JTextField();
 		username.addFocusListener(new FocusAdapter() {
 			
 			public void focusGained(FocusEvent e) {
@@ -79,6 +83,7 @@ public class Loginpage {
 		});
 		
 		password = new JPasswordField();
+		password.setToolTipText("");
 		password.addFocusListener(new FocusAdapter() {
 			
 			public void focusGained(FocusEvent e) {
@@ -111,28 +116,24 @@ public class Loginpage {
 		username.setBounds(414, 197, 319, 60);
 		panel.add(username);
 		
-		JLabel lblNewLabel_1 = new JLabel("LOGIN");
-		lblNewLabel_1.setBounds(408, 391, 157, 46);
-		panel.add(lblNewLabel_1);
-		lblNewLabel_1.setHorizontalAlignment(SwingConstants.CENTER);
-		lblNewLabel_1.setFont(new Font("DK Lemon Yellow Sun", Font.PLAIN, 40));
+		loginButton = new JLabel("LOGIN");
+		loginButton.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
+		loginButton.setBounds(408, 391, 157, 46);
+		panel.add(loginButton);
+		loginButton.setHorizontalAlignment(SwingConstants.CENTER);
+		loginButton.setFont(new Font("DK Lemon Yellow Sun", Font.PLAIN, 40));
 		
-		JLabel lblNewLabel_1_1 = new JLabel("SIGN UP");
-		lblNewLabel_1_1.addMouseListener(new MouseAdapter() {
-			@Override
-			public void mouseClicked(MouseEvent e) {
-				choices Home = new choices();
-				Home.choices();
-				frame.hide();
-			}
-		});
-		lblNewLabel_1_1.setBounds(575, 391, 147, 46);
-		panel.add(lblNewLabel_1_1);
-		lblNewLabel_1_1.setHorizontalAlignment(SwingConstants.CENTER);
-		lblNewLabel_1_1.setFont(new Font("DK Lemon Yellow Sun", Font.PLAIN, 40));
+		signupButton = new JLabel("SIGN UP");
+		signupButton.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
+
+		signupButton.setBounds(575, 391, 147, 46);
+		panel.add(signupButton);
+		signupButton.setHorizontalAlignment(SwingConstants.CENTER);
+		signupButton.setFont(new Font("DK Lemon Yellow Sun", Font.PLAIN, 40));
 		
 		JLabel lblNewLabel = new JLabel("");
-		lblNewLabel.setIcon(new ImageIcon("C:\\Users\\Stacy Mae\\OneDrive - National University\\Desktop\\STEH FILES\\SUBJECT FOLDERS\\OOP\\kinaiya\\LOGIN DESIGN Final.png"));
+		Image img = new ImageIcon(this.getClass().getResource("\\LOGIN DESIGN Final.png")).getImage();
+		lblNewLabel.setIcon(new ImageIcon(img));
 		lblNewLabel.setBounds(0, 0, 824, 472);
 		panel.add(lblNewLabel);
 	}

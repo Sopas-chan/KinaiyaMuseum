@@ -8,32 +8,27 @@ import javax.swing.JLabel;
 import javax.swing.ImageIcon;
 import java.awt.Color;
 import java.awt.Font;
+import java.awt.Image;
+
 import javax.swing.SwingConstants;
+import java.awt.Cursor;
 
-public class dashboard extends JFrame {
+public class V_dashboard extends JFrame {
 
-	private JPanel contentPane;
+	public JPanel contentPane;
 
 	/**
 	 * Launch the application.
 	 */
-	public static void main(String[] args) {
-		EventQueue.invokeLater(new Runnable() {
-			public void run() {
-				try {
-					dashboard frame = new dashboard();
-					frame.setVisible(true);
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-			}
-		});
-	}
+
 
 	/**
 	 * Create the frame.
 	 */
-	public dashboard() {
+	public V_dashboard() {
+		initialize();
+	}
+	public void initialize() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 842, 503);
 		contentPane = new JPanel();
@@ -46,13 +41,10 @@ public class dashboard extends JFrame {
 		contentPane.add(panel);
 		panel.setLayout(null);
 		
-		JLabel logout = new JLabel("Logout");
-		logout.setFont(new Font("DK Lemon Yellow Sun", Font.PLAIN, 30));
-		logout.setForeground(Color.WHITE);
-		logout.setBounds(22, 11, 75, 32);
-		panel.add(logout);
+
 		
 		JLabel viewbtn = new JLabel("view");
+		viewbtn.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
 		viewbtn.setHorizontalAlignment(SwingConstants.CENTER);
 		viewbtn.setForeground(Color.WHITE);
 		viewbtn.setFont(new Font("DK Lemon Yellow Sun", Font.PLAIN, 40));
@@ -60,14 +52,16 @@ public class dashboard extends JFrame {
 		panel.add(viewbtn);
 		
 		JLabel uploadbtn = new JLabel("upload");
+		uploadbtn.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
 		uploadbtn.setHorizontalAlignment(SwingConstants.CENTER);
 		uploadbtn.setFont(new Font("DK Lemon Yellow Sun", Font.PLAIN, 40));
 		uploadbtn.setForeground(Color.WHITE);
 		uploadbtn.setBounds(35, 381, 156, 53);
 		panel.add(uploadbtn);
 		
-		JLabel bg = new JLabel("New label");
-		bg.setIcon(new ImageIcon("C:\\Users\\Stacy Mae\\OneDrive - National University\\Desktop\\STEH FILES\\SUBJECT FOLDERS\\OOP\\kinaiya\\dashboard.png"));
+		JLabel bg = new JLabel("");
+		Image img = new ImageIcon(this.getClass().getResource("\\dashboard.png")).getImage();
+		bg.setIcon(new ImageIcon(img));
 		bg.setBounds(0, 0, 826, 464);
 		panel.add(bg);
 	}
