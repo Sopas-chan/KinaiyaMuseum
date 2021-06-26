@@ -103,11 +103,14 @@ public class V_Loginpage {
 				}
 			}
 		});
+		password.setText("Password");
+		password.setEchoChar((char)0);
 		password.setFont(new Font("DK Lemon Yellow Sun", Font.PLAIN, 40));
 		password.setForeground(Color.WHITE);
 		password.setBackground(Color.BLACK);
 		password.setBounds(414, 285, 319, 60);
 		panel.add(password);
+		
 		username.setText("Username");
 		username.setForeground(Color.WHITE);
 		username.setFont(new Font("DK Lemon Yellow Sun", Font.PLAIN, 40));

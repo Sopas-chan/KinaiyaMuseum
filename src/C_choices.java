@@ -30,6 +30,7 @@ public class C_choices {
 				V_Loginpage vl = new V_Loginpage();
 				M_Loginpage ml = new M_Loginpage();
 				C_Loginpage cl = new C_Loginpage(vl, ml);
+				vc.frame.hide();
 			}
 		});
 	}

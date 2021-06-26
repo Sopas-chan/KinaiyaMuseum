@@ -5,6 +5,7 @@ import javax.swing.JFrame;
 import javax.swing.border.EmptyBorder;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
+import javax.swing.JPasswordField;
 import javax.swing.ImageIcon;
 import javax.swing.JTextField;
 import java.awt.Color;
@@ -21,7 +22,8 @@ import java.awt.Cursor;
 public class V_Signup {
 
 	JFrame frame;
-	private JTextField fn, un, pass, ln, pn, confirmpass;
+	private JTextField fn, un, ln, pn;
+	private JPasswordField pass, confirmpass;
 	private JLabel back, signUp;
 
 	public V_Signup() {
@@ -114,19 +116,29 @@ public class V_Signup {
 		frame.getContentPane().add(fn);
 		fn.setColumns(10);
 		
-		pass = new JTextField();
+		pass = new JPasswordField();
+		pass.setToolTipText("");
 		pass.addFocusListener(new FocusAdapter() {
 			@Override
 			public void focusGained(FocusEvent e) {
 				if(pass.getText().equals("Password")) {
+					pass.setEchoChar('•');
 					pass.setText("");
 				}
 				else {
 					pass.selectAll();
 				}
 			}
+			@Override
+			public void focusLost(FocusEvent e) {
+				if(pass.getText().equals("")) {
+					pass.setText("Password");
+					pass.setEchoChar((char)0);
+				}
+			}
 		});
-		pass.setText("password");
+		pass.setText("Password");
+		pass.setEchoChar((char)0);
 		pass.setForeground(Color.WHITE);
 		pass.setFont(new Font("DK Lemon Yellow Sun", Font.PLAIN, 18));
 		pass.setColumns(10);
@@ -181,19 +193,29 @@ public class V_Signup {
 		pn.setBounds(439, 207, 117, 30);
 		frame.getContentPane().add(pn);
 		
-		confirmpass = new JTextField();
+		confirmpass = new JPasswordField();
+		confirmpass.setToolTipText("");
 		confirmpass.addFocusListener(new FocusAdapter() {
 			@Override
 			public void focusGained(FocusEvent e) {
 				if(confirmpass.getText().equals("Confirm Password")) {
+					confirmpass.setEchoChar('•');
 					confirmpass.setText("");
 				}
 				else {
 					confirmpass.selectAll();
 				}
 			}
+			@Override
+			public void focusLost(FocusEvent e) {
+				if(confirmpass.getText().equals("")) {
+					confirmpass.setText("Confirm Password");
+					confirmpass.setEchoChar((char)0);
+				}
+			}
 		});
-		confirmpass.setText("confirm password");
+		confirmpass.setText("Confirm Password");
+		confirmpass.setEchoChar((char)0);
 		confirmpass.setForeground(Color.WHITE);
 		confirmpass.setFont(new Font("DK Lemon Yellow Sun", Font.PLAIN, 18));
 		confirmpass.setColumns(10);

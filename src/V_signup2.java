@@ -5,6 +5,7 @@ import javax.swing.JFrame;
 import javax.swing.border.EmptyBorder;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
+import javax.swing.JPasswordField;
 import javax.swing.ImageIcon;
 import java.awt.Font;
 import java.awt.Image;
@@ -21,7 +22,9 @@ import java.awt.Cursor;
 public class V_signup2 {
 
 	JFrame frame;
-	private JTextField fn, un, ln, pass, confirmpass;
+	private JTextField fn, un, ln;
+	public String firstname, lastname, username, password, cfpass;
+	private JPasswordField pass, confirmpass;
 	private JLabel back, signin;
 	/**
 	 * Launch the application.
@@ -50,7 +53,9 @@ public class V_signup2 {
 	void backButton(MouseAdapter ma) {
 		back.addMouseListener(ma);
 	}
-	
+	void blankFields() {
+		JOptionPane.showMessageDialog(null, "One or more fields cannot be empty!");
+	}
 	/**
 	 * Initialize the contents of the frame.
 	 */
@@ -67,19 +72,29 @@ public class V_signup2 {
 		back.setBounds(505, 52, 96, 43);
 		frame.getContentPane().add(back);
 		
-		pass = new JTextField();
+		pass = new JPasswordField();
+		pass.setToolTipText("");
 		pass.addFocusListener(new FocusAdapter() {
 			@Override
 			public void focusGained(FocusEvent e) {
 				if(pass.getText().equals("Password")) {
+					pass.setEchoChar('•');
 					pass.setText("");
 				}
 				else {
 					pass.selectAll();
 				}
 			}
+			@Override
+			public void focusLost(FocusEvent e) {
+				if(pass.getText().equals("")) {
+					pass.setText("Password");
+					pass.setEchoChar((char)0);
+				}
+			}
 		});
-		pass.setText("PASSWORD");
+		pass.setText("Password");
+		pass.setEchoChar((char)0);
 		pass.setForeground(Color.WHITE);
 		pass.setFont(new Font("DK Lemon Yellow Sun", Font.PLAIN, 18));
 		pass.setColumns(10);
@@ -100,7 +115,7 @@ public class V_signup2 {
 				}
 			}
 		});
-		un.setText("USERNAME");
+		un.setText("Username");
 		un.setForeground(Color.WHITE);
 		un.setFont(new Font("DK Lemon Yellow Sun", Font.PLAIN, 18));
 		un.setColumns(10);
@@ -128,7 +143,7 @@ public class V_signup2 {
 					}
 			}
 		});
-		fn.setText("FIRST NAME");
+		fn.setText("First Name");
 		fn.setForeground(Color.WHITE);
 		fn.setFont(new Font("DK Lemon Yellow Sun", Font.PLAIN, 18));
 		fn.setColumns(10);
@@ -155,7 +170,7 @@ public class V_signup2 {
 				}
 			}
 		});
-		ln.setText("LAST NAME");
+		ln.setText("Last Name");
 		ln.setForeground(Color.WHITE);
 		ln.setFont(new Font("DK Lemon Yellow Sun", Font.PLAIN, 18));
 		ln.setColumns(10);
@@ -163,19 +178,29 @@ public class V_signup2 {
 		ln.setBounds(442, 143, 117, 30);
 		frame.getContentPane().add(ln);
 		
-		confirmpass = new JTextField();
+		confirmpass = new JPasswordField();
+		confirmpass.setToolTipText("");
 		confirmpass.addFocusListener(new FocusAdapter() {
 			@Override
 			public void focusGained(FocusEvent e) {
 				if(confirmpass.getText().equals("Confirm Password")) {
+					confirmpass.setEchoChar('•');
 					confirmpass.setText("");
 				}
 				else {
 					confirmpass.selectAll();
 				}
 			}
+			@Override
+			public void focusLost(FocusEvent e) {
+				if(confirmpass.getText().equals("")) {
+					confirmpass.setText("Confirm Password");
+					confirmpass.setEchoChar((char)0);
+				}
+			}
 		});
-		confirmpass.setText("CONFIRM PASSWORD");
+		confirmpass.setText("Confirm Password");
+		confirmpass.setEchoChar((char)0);
 		confirmpass.setForeground(Color.WHITE);
 		confirmpass.setFont(new Font("DK Lemon Yellow Sun", Font.PLAIN, 18));
 		confirmpass.setColumns(10);
@@ -189,6 +214,12 @@ public class V_signup2 {
 		bg.setIcon(new ImageIcon(img));
 		bg.setBounds(0, 0, 826, 464);
 		frame.getContentPane().add(bg);
+		
+		firstname = fn.getText();
+		lastname = ln.getText();
+		username = un.getText();
+		password = pass.getText();
+		cfpass = confirmpass.getText();
+		
 	}
-
 }

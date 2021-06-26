@@ -12,7 +12,11 @@ public class C_signup2 {
 			@Override
 			public void mouseClicked(MouseEvent e) {
 				ms2.setData(vs2.memberCreds());
-				if (!ms2.getPass().equals(ms2.getCPass())) {
+				if (vs2.firstname.trim().equals("") || vs2.firstname.trim().equals("First Name") || vs2.lastname.trim().equals("") 
+					|| vs2.lastname.trim().equals("Last Name") || vs2.username.trim().equals("") || vs2.username.trim().equals("Username")) {
+					vs2.blankFields();
+				}
+				else if (!ms2.getPass().equals(ms2.getCPass())) {
 					vs2.notMatch();
 				}
 				else {

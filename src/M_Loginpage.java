@@ -4,9 +4,9 @@ public class M_Loginpage {
 	ArrayList<String> username = new ArrayList<String>();
 	ArrayList<String> password = new ArrayList<String>();
 	String usern, passn;
+	
 	public M_Loginpage() {
-		username.add("Ram");
-		password.add("pass");
+		
 	}
 	public M_Loginpage(ArrayList<String> RD) {
 		username.add(RD.get(0));
