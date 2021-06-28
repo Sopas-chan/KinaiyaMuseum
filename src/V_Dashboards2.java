@@ -9,7 +9,7 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.SwingConstants;
 
-public class V_Dashboards {
+public class V_Dashboards2 {
 
 	public JFrame frame;
 
@@ -20,7 +20,7 @@ public class V_Dashboards {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					V_Dashboards window = new V_Dashboards();
+					V_Dashboards2 window = new V_Dashboards2();
 					window.frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -32,7 +32,7 @@ public class V_Dashboards {
 	/**
 	 * Create the application.
 	 */
-	public V_Dashboards() {
+	public V_Dashboards2() {
 		initialize();
 	}
 
@@ -68,7 +68,7 @@ public class V_Dashboards {
 		
 		JLabel bg = new JLabel("");
 		Image img = new ImageIcon(this.getClass().getResource("\\dashboard.png")).getImage();
-		bg.setIcon(new ImageIcon("C:\\Users\\Stacy Mae\\OneDrive - National University\\Desktop\\STEH FILES\\SUBJECT FOLDERS\\OOP\\kinaiya\\Dashboards.png"));
+		bg.setIcon(new ImageIcon(img));
 		bg.setBounds(0, 0, 826, 464);
 		frame.getContentPane().add(bg);
 	}
