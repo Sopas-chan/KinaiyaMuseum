@@ -15,7 +15,7 @@ public class C_Loginpage {
 			public void mouseClicked(MouseEvent e) {
 				V_choices Home = new V_choices();
 				C_choices choice = new C_choices(Home);
-				vl.frame.hide();
+				vl.frame.dispose();
 			}
 		});
 		vl.loginButton(new MouseAdapter() {
@@ -31,13 +31,15 @@ public class C_Loginpage {
 				}
 				else if (ml.getInputUsername().equals(ml.getusername()) && ml.getInputPassword().equals(ml.getpassword()) && ml.getType().equals("Artist")) {
 					V_Dashboards dash = new V_Dashboards();
-					dash.frame.setVisible(true);
-					vl.frame.hide();
+					M_Dashboards md = new M_Dashboards(ml.Creds());
+					C_Dashboards cd = new C_Dashboards(dash, md);
+					vl.frame.dispose();
 				}
 				else if (ml.getInputUsername().equals(ml.getusername()) && ml.getInputPassword().equals(ml.getpassword())) {
 					V_Dashboards2 dash = new V_Dashboards2();
-					dash.frame.setVisible(true);
-					vl.frame.hide();
+					M_Dashboards2 md2 = new M_Dashboards2(ml.Creds());
+					C_Dashboards2 cl2 = new C_Dashboards2(dash, md2);
+					vl.frame.dispose();
 				}
 
 			}

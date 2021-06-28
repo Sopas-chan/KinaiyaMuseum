@@ -12,8 +12,8 @@ import javax.swing.SwingConstants;
 
 public class V_Dashboards2 {
 
-	public JFrame frame;
-	public JLabel logout;
+	JFrame frame;
+	JLabel logout;
 	
 	public V_Dashboards2() {
 		initialize();
@@ -22,12 +22,14 @@ public class V_Dashboards2 {
 	void logoutButton(MouseAdapter ma) {
 		logout.addMouseListener(ma);
 	}
+	
 	private void initialize() {
 		frame = new JFrame();
 		frame.setBounds(100, 100, 842, 503);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		
 		logout = new JLabel("Logout");
+		logout.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
 		logout.setFont(new Font("DK Lemon Yellow Sun", Font.PLAIN, 30));
 		logout.setForeground(Color.WHITE);
 		logout.setBounds(22, 11, 75, 32);

@@ -25,7 +25,7 @@ public class C_signup2 {
 					V_Loginpage vl = new V_Loginpage();
 					M_Loginpage ml = new M_Loginpage(ms2.getData());
 					C_Loginpage cl = new C_Loginpage(vl, ml);
-					vs2.frame.hide();
+					vs2.frame.dispose();
 				}
 			}
 		});
@@ -34,7 +34,7 @@ public class C_signup2 {
 			public void mouseClicked(MouseEvent e) {
 				V_choices vc = new V_choices();
 				C_choices cc = new C_choices(vc);
-				vs2.frame.hide();
+				vs2.frame.dispose();
 			}
 		});
 	}

@@ -1,16 +1,16 @@
 import java.util.ArrayList;
 
 public class M_Loginpage {
-	ArrayList<String> username = new ArrayList<String>();
-	ArrayList<String> password = new ArrayList<String>();
-	String type, usern, passn;
+	ArrayList<String> Credentials;
+	String type, usern, passn, username, password;
 	
 	public M_Loginpage() {
 		
 	}
 	public M_Loginpage(ArrayList<String> RD) {
-		username.add(RD.get(0));
-		password.add(RD.get(1));
+		this.Credentials = RD;
+		username = RD.get(0);
+		password = RD.get(1);
 		type = RD.get(6);
 	}
 	public void setInputUsername(String usern) {
@@ -26,15 +26,16 @@ public class M_Loginpage {
 		return passn;
 	}
 	public String getusername() {
-		String user = username.get(0);
-		return user;
+		return username;
 	}
 	public String getpassword() {
-		String pass = password.get(0);
-		return pass;
+		return password;
 	}
 	public String getType() {
 		return type;
+	}
+	public ArrayList<String> Creds() {
+		return Credentials;
 	}
 }
 
