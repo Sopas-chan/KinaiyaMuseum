@@ -27,7 +27,7 @@ public class V_Dashboards2 {
 		frame.setBounds(100, 100, 842, 503);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		
-		JLabel logout = new JLabel("Logout");
+		logout = new JLabel("Logout");
 		logout.setFont(new Font("DK Lemon Yellow Sun", Font.PLAIN, 30));
 		logout.setForeground(Color.WHITE);
 		logout.setBounds(22, 11, 75, 32);
