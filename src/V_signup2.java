@@ -41,6 +41,8 @@ public class V_signup2 {
 		ReceivedData.add(confirmpass.getText());
 		ReceivedData.add(fn.getText());
 		ReceivedData.add(ln.getText());
+		ReceivedData.add("");
+		ReceivedData.add("Member");
 		return ReceivedData;
 	}
 	public void signUpButton(MouseAdapter ma) {

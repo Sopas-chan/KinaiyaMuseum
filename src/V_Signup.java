@@ -38,6 +38,7 @@ public class V_Signup {
 		RecievedData.add(pn.getText());
 		RecievedData.add(ln.getText());
 		RecievedData.add(pn.getText());
+		RecievedData.add("Artist");
 		return RecievedData;
 	}
 	void signUpButton(MouseAdapter ma) {

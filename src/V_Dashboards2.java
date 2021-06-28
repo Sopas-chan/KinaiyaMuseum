@@ -3,6 +3,7 @@ import java.awt.Cursor;
 import java.awt.EventQueue;
 import java.awt.Font;
 import java.awt.Image;
+import java.awt.event.MouseAdapter;
 
 import javax.swing.ImageIcon;
 import javax.swing.JFrame;
@@ -12,33 +13,15 @@ import javax.swing.SwingConstants;
 public class V_Dashboards2 {
 
 	public JFrame frame;
-
-	/**
-	 * Launch the application.
-	 */
-	public static void main(String[] args) {
-		EventQueue.invokeLater(new Runnable() {
-			public void run() {
-				try {
-					V_Dashboards2 window = new V_Dashboards2();
-					window.frame.setVisible(true);
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-			}
-		});
-	}
-
-	/**
-	 * Create the application.
-	 */
+	public JLabel logout;
+	
 	public V_Dashboards2() {
 		initialize();
 	}
 
-	/**
-	 * Initialize the contents of the frame.
-	 */
+	void logoutButton(MouseAdapter ma) {
+		logout.addMouseListener(ma);
+	}
 	private void initialize() {
 		frame = new JFrame();
 		frame.setBounds(100, 100, 842, 503);
@@ -67,8 +50,8 @@ public class V_Dashboards2 {
 		frame.getContentPane().add(uploadbtn);
 		
 		JLabel bg = new JLabel("");
-		Image img = new ImageIcon(this.getClass().getResource("\\dashboard.png")).getImage();
-		bg.setIcon(new ImageIcon("C:\\Users\\Stacy Mae\\OneDrive - National University\\Desktop\\STEH FILES\\SUBJECT FOLDERS\\OOP\\kinaiya\\Dashboards.png"));
+		Image img = new ImageIcon(this.getClass().getResource("\\dashboardS.png")).getImage();
+		bg.setIcon(new ImageIcon(img));
 		bg.setBounds(0, 0, 826, 464);
 		frame.getContentPane().add(bg);
 	}

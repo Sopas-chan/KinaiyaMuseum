@@ -46,7 +46,9 @@ public class V_Loginpage {
 	void loginButton(MouseAdapter ma) {
 		loginButton.addMouseListener(ma);
 	}
-	
+	void noInputs(){ 
+		JOptionPane.showMessageDialog(null, "Username/Password cannot be empty!");
+	}
 	public void wrongCreds() {
 		JOptionPane.showMessageDialog(null, "Username/Pass is incorrect or not found");
 	}

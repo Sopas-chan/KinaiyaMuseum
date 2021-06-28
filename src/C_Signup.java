@@ -27,6 +27,7 @@ public class C_Signup {
 					V_Loginpage vl = new V_Loginpage();
 					M_Loginpage ml = new M_Loginpage(ms.getData());
 					C_Loginpage cl = new C_Loginpage(vl, ml);
+					vs.frame.hide();
 				}
 			}
 		});

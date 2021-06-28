@@ -23,14 +23,23 @@ public class C_Loginpage {
 			public void mouseClicked(MouseEvent e) {
 				ml.setInputUsername(vl.getuser());
 				ml.setInputPassword(vl.getpass());
-				if (!ml.getInputUsername().equals(ml.getusername()) || !ml.getInputPassword().equals(ml.getpassword())) {
+				if (ml.getInputUsername().equals("") || ml.getInputUsername().equals("Username")|| ml.getInputPassword().equals(e) || ml.getInputPassword().equals("Password")) {
+					vl.noInputs();
+				}
+				else if (!ml.getInputUsername().equals(ml.getusername()) || !ml.getInputPassword().equals(ml.getpassword())) {
 					vl.wrongCreds();
 				}
-				else if (ml.getInputUsername().equals(ml.getusername()) && ml.getInputPassword().equals(ml.getpassword()) ) {
+				else if (ml.getInputUsername().equals(ml.getusername()) && ml.getInputPassword().equals(ml.getpassword()) && ml.getType().equals("Artist")) {
 					V_Dashboards dash = new V_Dashboards();
 					dash.frame.setVisible(true);
 					vl.frame.hide();
 				}
+				else if (ml.getInputUsername().equals(ml.getusername()) && ml.getInputPassword().equals(ml.getpassword())) {
+					V_Dashboards2 dash = new V_Dashboards2();
+					dash.frame.setVisible(true);
+					vl.frame.hide();
+				}
+
 			}
 		});
 	}
