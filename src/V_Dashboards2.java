@@ -68,7 +68,7 @@ public class V_Dashboards2 {
 		
 		JLabel bg = new JLabel("");
 		Image img = new ImageIcon(this.getClass().getResource("\\dashboard.png")).getImage();
-		bg.setIcon(new ImageIcon(img));
+		bg.setIcon(new ImageIcon("C:\\Users\\Stacy Mae\\OneDrive - National University\\Desktop\\STEH FILES\\SUBJECT FOLDERS\\OOP\\kinaiya\\Dashboards.png"));
 		bg.setBounds(0, 0, 826, 464);
 		frame.getContentPane().add(bg);
 	}
