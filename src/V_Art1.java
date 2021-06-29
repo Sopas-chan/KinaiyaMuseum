@@ -2,19 +2,24 @@ import java.awt.Color;
 import java.awt.EventQueue;
 import java.awt.Font;
 import java.awt.Image;
+import java.awt.event.MouseAdapter;
 
 import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import java.awt.Cursor;
 
 public class V_Art1 {
 
-	private JFrame frame;
+	JFrame frame;
 	JLabel back, bg;
 
 
 	public V_Art1() {
 		initialize();
+	}
+	void backButton(MouseAdapter ma) {
+		back.addMouseListener(ma);
 	}
 
 	private void initialize() {
@@ -23,6 +28,7 @@ public class V_Art1 {
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		
 		back = new JLabel("back");
+		back.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
 		back.setForeground(Color.WHITE);
 		back.setFont(new Font("DK Lemon Yellow Sun", Font.PLAIN, 40));
 		back.setBounds(10, 11, 84, 41);
