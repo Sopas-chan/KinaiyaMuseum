@@ -1,5 +1,9 @@
+import java.awt.Desktop;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+import java.io.IOException;
+import java.net.URI;
+import java.net.URISyntaxException;
 
 public class C_Dashboards2 {
 	V_Dashboards2 vd2;
@@ -17,6 +21,22 @@ public class C_Dashboards2 {
 				vd2.frame.dispose();
 			}
 		});
+		
+		vd2.mainweb(new MouseAdapter() {
+			@Override
+			public void mouseClicked(MouseEvent e) {
+				Desktop browser = Desktop.getDesktop();
+				try {
+					browser.browse(new URI("http://localhost/kinaiyaview/"));
+				}
+				catch(IOException err) {
+					
+				}
+				catch(URISyntaxException err) {
+				}
+			}
+		});
+		
 		vd2.art1(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {

@@ -18,36 +18,41 @@ public class V_Dashboards2 {
 	public V_Dashboards2() {
 		initialize();
 	}
-
+	
+	void mainweb(MouseAdapter ma) {
+		auctionbtn.addMouseListener(ma);
+	}
+	
 	void logoutButton(MouseAdapter ma) {
 		logout.addMouseListener(ma);
 	}
+	
 	void art1(MouseAdapter ma) {
 		a1.addMouseListener(ma);
 	}
+	
 	void art2(MouseAdapter ma) {
 		a2.addMouseListener(ma);
-
 	}
+	
 	void art3(MouseAdapter ma) {
 		a3.addMouseListener(ma);
-
 	}
+	
 	void art4(MouseAdapter ma) {
 		a4.addMouseListener(ma);
-
 	}
+	
 	void art5(MouseAdapter ma) {
 		a5.addMouseListener(ma);
-
 	}
+	
 	void art6(MouseAdapter ma) {
 		a6.addMouseListener(ma);
-
 	}
+	
 	void art7(MouseAdapter ma) {
 		a7.addMouseListener(ma);
-
 	}
 	
 	private void initialize() {

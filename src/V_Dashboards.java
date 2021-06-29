@@ -9,6 +9,7 @@ import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.SwingConstants;
+import java.awt.event.MouseEvent;
 
 public class V_Dashboards {
 
@@ -48,7 +49,9 @@ public class V_Dashboards {
 	}
 	void art7(MouseAdapter ma) {
 		a7.addMouseListener(ma);
-
+	}
+	void artweb(MouseAdapter ma) {
+		uploadbtn.addMouseListener(ma);
 	}
 
 	private void initialize() {
