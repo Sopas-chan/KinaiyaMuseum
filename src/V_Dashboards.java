@@ -50,7 +50,6 @@ public class V_Dashboards {
 		uploadbtn.setForeground(Color.WHITE);
 		uploadbtn.setBounds(35, 381, 156, 53);
 		frame.getContentPane().add(uploadbtn);
-		Image img = new ImageIcon(this.getClass().getResource("\\dashboardS.png")).getImage();
 		
 		JLabel a2 = new JLabel("a2");
 		a2.setVerticalAlignment(SwingConstants.BOTTOM);
@@ -95,7 +94,8 @@ public class V_Dashboards {
 		frame.getContentPane().add(a7);
 		
 		JLabel bg = new JLabel("");
-		bg.setIcon(new ImageIcon("C:\\Users\\Stacy Mae\\OneDrive - National University\\Desktop\\STEH FILES\\SUBJECT FOLDERS\\OOP\\kinaiya\\dashboard.png"));
+		Image img = new ImageIcon(this.getClass().getResource("\\dashboard.png")).getImage();
+		bg.setIcon(new ImageIcon(img));	
 		bg.setBounds(0, 0, 826, 464);
 		frame.getContentPane().add(bg);
 	}
