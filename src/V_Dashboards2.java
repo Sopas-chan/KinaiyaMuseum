@@ -63,12 +63,12 @@ public class V_Dashboards2 {
 		logout.setBounds(22, 11, 75, 32);
 		frame.getContentPane().add(logout);
 		
-		auctionbtn = new JLabel("auction");
+		auctionbtn = new JLabel("View Gallery");
 		auctionbtn.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
 		auctionbtn.setHorizontalAlignment(SwingConstants.CENTER);
 		auctionbtn.setFont(new Font("DK Lemon Yellow Sun", Font.PLAIN, 40));
 		auctionbtn.setForeground(Color.WHITE);
-		auctionbtn.setBounds(35, 381, 156, 53);
+		auctionbtn.setBounds(19, 386, 192, 53);
 		frame.getContentPane().add(auctionbtn);
 		
 		a1 = new JLabel("a1");
