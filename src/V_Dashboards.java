@@ -1,5 +1,6 @@
 import java.awt.Color;
 import java.awt.Cursor;
+import java.awt.Desktop;
 import java.awt.EventQueue;
 import java.awt.Font;
 import java.awt.Image;
@@ -9,6 +10,10 @@ import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.SwingConstants;
+import java.awt.event.MouseEvent;
+import java.io.IOException;
+import java.net.URI;
+import java.net.URISyntaxException;
 
 public class V_Dashboards {
 
@@ -35,6 +40,7 @@ public class V_Dashboards {
 		logout.setBounds(22, 11, 75, 32);
 		frame.getContentPane().add(logout);
 		
+<<<<<<< Updated upstream
 		JLabel viewbtn = new JLabel("view");
 		viewbtn.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
 		viewbtn.setHorizontalAlignment(SwingConstants.CENTER);
@@ -44,6 +50,23 @@ public class V_Dashboards {
 		frame.getContentPane().add(viewbtn);
 		
 		JLabel uploadbtn = new JLabel("Upload");
+=======
+		uploadbtn = new JLabel("Upload");
+		uploadbtn.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseClicked(MouseEvent e) {
+				Desktop browser = Desktop.getDesktop();
+				try {
+					browser.browse(new URI("http://localhost/kinaiyagallery/"));
+				}
+				catch(IOException err) {
+					
+				}
+				catch(URISyntaxException err) {
+				}
+			}
+		});
+>>>>>>> Stashed changes
 		uploadbtn.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
 		uploadbtn.setHorizontalAlignment(SwingConstants.CENTER);
 		uploadbtn.setFont(new Font("DK Lemon Yellow Sun", Font.PLAIN, 40));
