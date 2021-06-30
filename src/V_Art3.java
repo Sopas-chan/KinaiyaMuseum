@@ -12,7 +12,7 @@ import javax.swing.JLabel;
 public class V_Art3 {
 
 	JFrame frame;
-	JLabel back, bg;
+	private JLabel back, bg;
 
 
 	public V_Art3() {

@@ -13,7 +13,7 @@ import javax.swing.SwingConstants;
 public class V_Dashboards2 {
 
 	JFrame frame;
-	JLabel a1, a2, a3 ,a4, a5, a6, a7, bg, logout, auctionbtn;
+	private JLabel a1, a2, a3 ,a4, a5, a6, a7, bg, logout, auctionbtn;
 	
 	public V_Dashboards2() {
 		initialize();

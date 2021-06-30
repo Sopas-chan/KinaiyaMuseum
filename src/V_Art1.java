@@ -12,7 +12,7 @@ import java.awt.Cursor;
 public class V_Art1 {
 
 	JFrame frame;
-	JLabel back, bg;
+	private JLabel back, bg;
 
 
 	public V_Art1() {

@@ -14,7 +14,7 @@ import java.awt.event.MouseEvent;
 public class V_Dashboards {
 
 	public JFrame frame;
-	JLabel a1, a2, a3 ,a4, a5, a6, a7, bg, logout, uploadbtn;
+	private JLabel a1, a2, a3 ,a4, a5, a6, a7, bg, logout, uploadbtn;
 
 
 	public V_Dashboards() {
