@@ -33,7 +33,8 @@ public class C_signup2 {
 			@Override
 			public void mouseClicked(MouseEvent e) {
 				V_choices vc = new V_choices();
-				C_choices cc = new C_choices(vc);
+				M_choices mc = new M_choices(ms2.getData());
+				C_choices cc = new C_choices(vc, mc);
 				vs2.frame.dispose();
 			}
 		});

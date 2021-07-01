@@ -4,8 +4,10 @@ import java.util.ArrayList;
 
 public class C_choices {
 	V_choices vc;
-	public C_choices(V_choices vc) {
+	M_choices mc;
+	public C_choices(V_choices vc, M_choices mc) {
 		this.vc = vc;
+		this.mc = mc;
 		vc.frame.setVisible(true);
 		vc.artistButton(new MouseAdapter() {
 			@Override
@@ -30,7 +32,7 @@ public class C_choices {
 			public void mouseClicked(MouseEvent e) {
 				ArrayList<String> empty = new ArrayList<String>();
 				V_Loginpage vl = new V_Loginpage();
-				M_Loginpage ml = new M_Loginpage(empty);
+				M_Loginpage ml = new M_Loginpage(mc.Creds());
 				C_Loginpage cl = new C_Loginpage(vl, ml);
 				vc.frame.dispose();
 			}

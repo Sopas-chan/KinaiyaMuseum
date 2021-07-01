@@ -26,6 +26,7 @@ public class V_Art1 {
 		frame = new JFrame();
 		frame.setBounds(100, 100, 837, 496);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frame.getContentPane().setLayout(null);
 		
 		back = new JLabel("back");
 		back.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
@@ -37,8 +38,7 @@ public class V_Art1 {
 		bg = new JLabel("New label");
 		Image img = new ImageIcon(this.getClass().getResource("\\artwork1.png")).getImage();
 		bg.setIcon(new ImageIcon(img));	
-		bg.setBounds(0, 0, 828, 464);
+		bg.setBounds(0, 0, 821, 457);
 		frame.getContentPane().add(bg);
 	}
-
 }

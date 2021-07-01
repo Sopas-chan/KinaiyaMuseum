@@ -14,7 +14,8 @@ public class C_Loginpage {
 			@Override
 			public void mouseClicked(MouseEvent e) {
 				V_choices Home = new V_choices();
-				C_choices choice = new C_choices(Home);
+				M_choices mc = new M_choices(ml.Creds());
+				C_choices choice = new C_choices(Home, mc);
 				vl.frame.dispose();
 			}
 		});

@@ -35,7 +35,8 @@ public class C_Signup {
 			@Override
 			public void mouseClicked(MouseEvent e) {
 				V_choices vc = new V_choices();
-				C_choices cc = new C_choices(vc);
+				M_choices mc = new M_choices(ms.getData());
+				C_choices cc = new C_choices(vc, mc);
 				vs.frame.dispose();
 			}
 		});
